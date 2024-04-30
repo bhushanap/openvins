@@ -1,14 +1,15 @@
 # OpenVins for Ros Eloquent
 # Installation
+
+Install following dependencies as mentioned [here](https://docs.openvins.com/gs-installing.html) -
+
 `sudo apt-get install ros-eloquent-ros2bag ros-eloquent-rosbag2*` (Bag utilities, not all might work, it's fine)
 
 `sudo apt-get install libeigen3-dev libboost-all-dev libceres-dev`
 
 `sudo apt-get install ros-eloquent-cv-bridge` (Try uninstalling and reinstalling opencv bridge if build gives errors)
 
-(ONLY BUILD OPENCV THIS IF OPENVINS BUILD ERROR PERSISTS, else ignore these next few steps)
-
-(No need to build opencv contrib with -DENABLE_ARUCO_TAGS=OFF, can be skipped)
+(IF THE ABOVE DOESN'T SUFFICE, THEN ONLY BUILD OPENCV, else ignore these next few steps)
 
 `git clone https://github.com/opencv/opencv/`
 
@@ -22,7 +23,7 @@
 
 `sudo make install`
 
-If above dependencies are installed, build openvins
+Asssuming the dependencies are installed correctly, build openvins
 
 `mkdir -p ~/ov_ws/src/`
 
